@@ -1,0 +1,82 @@
+/* Основная кнопка */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* Меню с мессенджерами */
+.messenger-menu {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 320px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1000;
+}
+
+/* Появление меню */
+.messenger-menu.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Кнопки мессенджеров */
+.messenger-menu a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.messenger-menu a:hover {
+    background-color: #e3e3e3;
+}
+
+.messenger-menu a img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
+
+/* Кнопка закрытия (крестик) */
+.close-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
